@@ -1,0 +1,40 @@
+stepzen import curl 'https://api.api-ninjas.com/v1/exercises?muscle=chest ' -H "X-API-KEY : RpoB9Dp572dPSHt0r3SfvA==9wPHLUXlnrsYNfky";
+
+f07WI7mVRMU4ltzPz0bDEN91XapY7POfra0OP73vDaQZsi0pCTQjD95SEjWSOvhi
+
+curl --location --request POST 'https://ap-southeast-1.aws.data.mongodb-api.com/app/data-znpfz/endpoint/data/v1/action/find' \
+--header 'Content-Type: application/json' \
+--header 'Access-Control-Request-Headers: *' \
+--header 'api-key: f07WI7mVRMU4ltzPz0bDEN91XapY7POfra0OP73vDaQZsi0pCTQjD95SEjWSOvhi' \
+--data-raw '{
+    "collection":"sets",
+    "database":"workouts",
+    "dataSource":"Cluster2"
+}'
+
+stepzen import curl --request POST 'https://ap-southeast-1.aws.data.mongodb-api.com/app/data-znpfz/endpoint/data/v1/action/find' \
+--header 'Content-Type: application/json' \
+--header 'Access-Control-Request-Headers: *' \
+--header 'api-key: f07WI7mVRMU4ltzPz0bDEN91XapY7POfra0OP73vDaQZsi0pCTQjD95SEjWSOvhi' \
+--data-raw '{
+    "collection":"sets",
+    "database":"workouts",
+    "dataSource":"Cluster2"
+}'
+
+
+stepzen import curl "https://ap-southeast-1.aws.data.mongodb-api.com/app/data-znpfz/endpoint/data/v1/action/insertOne" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "apiKey: f07WI7mVRMU4ltzPz0bDEN91XapY7POfra0OP73vDaQZsi0pCTQjD95SEjWSOvhi" \
+  -d '{
+    "dataSource": "Cluster2",
+    "database": "workouts",
+    "collection": "sets",
+    "document": {
+      "exercise": "push",
+      "weight" : 4,
+      "reps" : 1
+    }
+  }'
